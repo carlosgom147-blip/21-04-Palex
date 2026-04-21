@@ -1,0 +1,6 @@
+{
+  "name": "ILS Palex Medical - EWM Dashboard",
+  "description": "Dashboard de productividad logística para almacenes Palex Medical gestionados por ILS. Procesamiento de datos SAP EWM, análisis de operarios, costes y optimización mediante IA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

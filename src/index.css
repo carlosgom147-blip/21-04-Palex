@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-blue: #0071e3;
+  --color-brand-red: #e8231a;
+  --color-surface-gray: #f5f6f8;
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #86868b;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface-gray);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .bento-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+  }
+
+  .kpi-label {
+    font-size: 9px;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .kpi-value {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .trend-pill {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 8px;
+    width: fit-content;
+  }
+
+  .pill-pos {
+    background: #e6fcf5;
+    color: #0ca678;
+  }
+
+  .pill-alert {
+    background: #fff9f0;
+    color: #c47e00;
+  }
+
+  .pill-neg {
+    background: #fff2f2;
+    color: #e8231a;
+  }
+
+  .navbar {
+    height: 64px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .nav-pills {
+    background: #f0f0f2;
+    padding: 4px;
+    border-radius: 12px;
+    display: flex;
+    gap: 4px;
+  }
+
+  .nav-tab {
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .nav-tab.active {
+    background: #fff;
+    color: var(--color-brand-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
